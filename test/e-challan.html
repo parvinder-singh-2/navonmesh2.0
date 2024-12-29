@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="w-full h-[100px] flex flex-wrap space-x-80 align-middle">
+        <div class="">
+          <img src='./src/assets/rmc-logo.png' alt="Logo" width=100px class='mx-10 py-2' />
+          
+        </div>
+        <div class="text-black gap-11 flex flex-wrap pl-32 text-2xl pt-10 font-semibold">
+          <a href="/"><h2>Home</h2></a>
+          <h2>Online-Services</h2>
+          <h2>LogIn</h2>
+          <h2>LogOut</h2>
+        </div>
+      </div>
+      <div class="w-full h-screen flex flex-wrap">
+        <div class="h-screen w-1/2 p-5">
+            <img src='./src/assets/road-maintainace.PNG' alt="Road Complaints" class='h-screen rounded-3xl'/>
+        </div>
+        <div class="h-screen w-1/2 p-5 justify-center align-middle text-center">
+            <h1 class="font-bold text-3xl p-10">Raise your Complaint regarding roads</h1>
+            <form class="text-start" action="" method="POST" enctype="multipart/form-data">
+                <!-- Address Field -->
+                <label class='text-xl font-semibold' for="address">Address:</label><br>
+                <input class="w-full border border-gray-700 rounded-lg h-10" id="address" name="address" value="" required><br><br>
+        
+                <!-- Image Upload Field -->
+                <label class='text-xl font-semibold' for="image">Upload Image:</label><br>
+                <input type="file" id="image" name="image" accept="image/*"><br><br>
+        
+                <!-- Phone Number Field -->
+                <label class='text-xl font-semibold' for="phone">Phone Number:</label><br>
+                <input class="w-full border border-gray-700 rounded-lg h-10" type="tel" id="phone" name="phone" value="" pattern="[0-9]{10}" placeholder="1234567890" required><br><br>
+        
+                <!-- Problem Description Field -->
+                <label class='text-xl font-semibold' for="problem">Problem Description:</label><br>
+                <textarea class="w-full border border-gray-700 rounded-lg" id="problem" name="problem" rows="5" cols="30" required>
+                </textarea><br><br>
+        
+                <!-- Submit Button -->
+                <button class="w-full rounded-full border border-gray-800 h-10 bg-blue-600 text-xl font-bold" type="submit">Submit</button>
+            </form>
+        </div>
+      </div>
+
+      <div class="h-40 bg-gray-800 w-full mt-40">
+        <div class="w-full h-[100px] flex flex-wrap space-x-80 align-middle">
+          <div class="mt-5">
+            <img src='./src/assets/rmc-logo.png' alt="Logo" width=100px class='mx-10 py-2 bg-gray-200' />
+          </div>
+          <div class="text-gray-200 gap-11 flex flex-wrap pl-32 text-2xl pt-10 font-semibold">
+            <a href="/"><h2>Home</h2></a>
+            <h2>Online-Services</h2>
+            <h2>LogIn</h2>
+            <h2>LogOut</h2>
+          </div>
+        </div>
+        </div>
+</body>
+</html>

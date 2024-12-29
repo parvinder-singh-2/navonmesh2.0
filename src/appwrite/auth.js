@@ -17,12 +17,37 @@ export class AuthService {
         try {
             await this.account.create(ID.unique(), email, password, name); 
             if (useraccount) {
-                //Call Another Method(Login)
+                return this.login({email, password});
             } else {
                 return useraccount;
             }
         } catch (error) {
             throw error;
+        }
+    }
+
+    async login({email, password}) {
+        try {
+            return await this.account.createEmailSession(email, password);
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    async getCurrentUser() {
+        try {
+            return await this.account.get();
+        } catch (error) {
+            console.log("Appwrite service :: Get Current User :: error", error);
+        }
+        return null;
+    }
+
+    async logout() {
+        try {
+            return await this.account.deleteSessions();
+        } catch (error) {
+            console.log("Appwrite service :: Logout :: error", error);
         }
     }
 }
